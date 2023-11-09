@@ -19,7 +19,7 @@ mongoose.connect('mongodb+srv://mohamad:mohamad@cluster0.razkqoh.mongodb.net/').
 
 app.use('/fruits',fruitsrouter);
 
-const port=3000;
+const port=3000 || process.env.PORT;
 app.listen(port,()=>{
 console.log('Connected on the server');
 })
